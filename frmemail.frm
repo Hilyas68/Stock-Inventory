@@ -1,65 +1,65 @@
 VERSION 5.00
 Begin VB.Form frmemail 
-   Caption         =   "Send E-mail"
-   ClientHeight    =   4410
+   Caption         =   "Form2"
+   ClientHeight    =   5670
    ClientLeft      =   60
    ClientTop       =   405
-   ClientWidth     =   5760
+   ClientWidth     =   9795
    LinkTopic       =   "Form2"
-   ScaleHeight     =   4410
-   ScaleWidth      =   5760
+   ScaleHeight     =   5670
+   ScaleWidth      =   9795
    StartUpPosition =   3  'Windows Default
-   Begin VB.CommandButton Command1 
-      Caption         =   "Send Mail"
-      Height          =   495
-      Left            =   1920
-      TabIndex        =   5
-      Top             =   3720
-      Width           =   2055
-   End
-   Begin VB.TextBox Text3 
+   Begin VB.TextBox Text1 
       Appearance      =   0  'Flat
-      Height          =   2295
-      Left            =   1080
-      MultiLine       =   -1  'True
-      TabIndex        =   4
-      Top             =   1320
+      ForeColor       =   &H80000007&
+      Height          =   375
+      Left            =   1320
+      TabIndex        =   3
+      Top             =   240
       Width           =   4215
    End
    Begin VB.TextBox Text2 
       Appearance      =   0  'Flat
       Height          =   375
-      Left            =   1080
-      TabIndex        =   3
-      Top             =   720
-      Width           =   4215
-   End
-   Begin VB.TextBox Text1 
-      Appearance      =   0  'Flat
-      ForeColor       =   &H80000007&
-      Height          =   375
-      Left            =   1080
+      Left            =   1320
       TabIndex        =   2
-      Top             =   120
+      Top             =   840
       Width           =   4215
    End
-   Begin VB.Label Label2 
-      BackStyle       =   0  'Transparent
-      Caption         =   "Subject"
-      Height          =   195
-      Left            =   120
+   Begin VB.TextBox Text3 
+      Appearance      =   0  'Flat
+      Height          =   2295
+      Left            =   1320
+      MultiLine       =   -1  'True
       TabIndex        =   1
-      Top             =   720
-      Width           =   540
+      Top             =   1440
+      Width           =   4215
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "Send Mail"
+      Height          =   495
+      Left            =   2160
+      TabIndex        =   0
+      Top             =   3840
+      Width           =   2055
    End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
       Caption         =   "To:"
       Height          =   315
-      Left            =   120
-      TabIndex        =   0
-      Top             =   240
+      Left            =   360
+      TabIndex        =   5
+      Top             =   360
       Width           =   240
+   End
+   Begin VB.Label Label2 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Subject"
+      Height          =   195
+      Left            =   360
+      TabIndex        =   4
+      Top             =   840
+      Width           =   540
    End
 End
 Attribute VB_Name = "frmemail"
@@ -108,4 +108,5 @@ Dim oSmtp As New EASendMailObjLib.Mail
         MsgBox "failed to send email with the following error:" & oSmtp.GetLastErrDescription()
     End If
 End Sub
+
 

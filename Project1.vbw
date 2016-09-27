@@ -1,5 +1,5 @@
-frmsecurity = 135, 110, 1179, 510, , 50, 50, 783, 515, C
-mdimainmenu = 89, 37, 1075, 437, , 50, 50, 941, 515, C
+frmsecurity = -81, 175, 963, 575, C, 50, 50, 783, 515, C
+mdimainmenu = 89, 37, 1075, 437, Z, 50, 50, 941, 515, C
 frmcustomermaintenance = 0, 0, 0, 0, C, 200, 200, 933, 665, C
 frmproductmaintenance = 0, 0, 0, 0, C, 0, 0, 0, 0, C
 frmsuppliermaintenance = 0, 0, 0, 0, C, 0, 0, 0, 0, C

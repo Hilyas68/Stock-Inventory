@@ -4,9 +4,9 @@ Begin VB.MDIForm mdimainmenu
    BackColor       =   &H8000000C&
    Caption         =   "STOCK INVENTORY MANAGER"
    ClientHeight    =   5700
-   ClientLeft      =   225
-   ClientTop       =   855
-   ClientWidth     =   9165
+   ClientLeft      =   165
+   ClientTop       =   810
+   ClientWidth     =   11340
    LinkTopic       =   "MDIForm1"
    Picture         =   "mdimainmenu.frx":0000
    StartUpPosition =   3  'Windows Default
@@ -22,8 +22,8 @@ Begin VB.MDIForm mdimainmenu
       Left            =   0
       TabIndex        =   0
       Top             =   5325
-      Width           =   9165
-      _ExtentX        =   16166
+      Width           =   11340
+      _ExtentX        =   20003
       _ExtentY        =   661
       _Version        =   393216
       BeginProperty Panels {8E3867A5-8586-11D1-B16A-00C0F0283628} 
@@ -89,6 +89,9 @@ Begin VB.MDIForm mdimainmenu
    End
    Begin VB.Menu mnureport 
       Caption         =   "&REPORT"
+      Begin VB.Menu mnuemail 
+         Caption         =   "E-mail"
+      End
       Begin VB.Menu mnucustomerreport 
          Caption         =   "C&ustomer"
       End
@@ -115,6 +118,11 @@ Dim conn As New ADODB.Connection
 Dim rs As New ADODB.Recordset
 
 
+
+Private Sub frmemail_Click()
+On Error Resume Next
+frmemail.Show
+End Sub
 
 Private Sub MDIForm_Load()
 On Error Resume Next
@@ -143,6 +151,10 @@ End Sub
 Private Sub mnucustomerreturn_Click()
 On Error Resume Next
 frmcustomerreturn.Show
+End Sub
+
+Private Sub mnuemail_Click()
+frmemail.Show
 End Sub
 
 Private Sub mnuemployee_Click()
